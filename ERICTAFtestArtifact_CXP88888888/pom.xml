@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.eni</groupId>
+        <artifactId>testArtifact-testware</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>ERICTAFtestArtifact_CXP88888888</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>all-taf-sdk</artifactId>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ERICTAFtestArtifact_operators</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.nms</groupId>
+            <artifactId>EnmBase</artifactId>
+            <version>1.1.188</version>
+        </dependency>
+    </dependencies>
+    <profiles>
+    <profile>
+        <id>maven305</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <reporting>
+            <excludeDefaults>true</excludeDefaults>
+            <plugins>
+                <plugin>
+                    <groupId>com.ericsson.cifwk.taf</groupId>
+                    <artifactId>taf-allure-old-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </reporting>
+    </profile>
+    <profile>
+        <id>maven323</id>
+        <reporting>
+            <excludeDefaults>true</excludeDefaults>
+            <plugins>
+                <plugin>
+                    <groupId>com.ericsson.cifwk.taf</groupId>
+                    <artifactId>taf-allure-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </reporting>
+    </profile>
+</profiles>
+</project>
+

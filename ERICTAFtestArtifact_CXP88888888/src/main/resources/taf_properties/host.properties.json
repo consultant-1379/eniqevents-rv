@@ -1,0 +1,27 @@
+[
+  {
+    "hostname": "host",
+    "ip": "atrcxb2974.athtem.eei.ericsson.se",
+    "type": "UNKNOWN",
+    "ports": {
+    "https": 443
+    }
+  },
+  {
+    "hostname": "grid_node",
+    "ip": "141.137.235.250",
+    "type": "SELENIUM_GRID",
+    "ports": {
+    	"http": 4444
+	}
+   },
+   {
+        "hostname": "rabbitmq",
+        "ip": "atclvm793.athtem.eei.ericsson.se",
+        "type": "rabbitmq",
+        "users": [
+            {"username": "guest", "password": "guest"}
+        ],
+        "ports": {"amqp": 5672}
+    } 
+]
